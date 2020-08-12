@@ -5,4 +5,8 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse("Home Page Employee")
+    return render(request, 'index.html')
+
+
+def profile(request):
+    return render(request, 'employee/profile.html')
