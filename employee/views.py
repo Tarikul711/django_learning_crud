@@ -10,3 +10,11 @@ def home(request):
 
 def profile(request):
     return render(request, 'employee/profile.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')

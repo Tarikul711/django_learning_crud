@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-</head>
-
-<body>
-    <h2>This is home Page</h2>
-</body>
-
-</html>
+{% extends 'layout.html' %} {% block title %} Home Page{% endblock title %} {% block contents %}
+<div class="jumbotron">
+    <h2 class="text-center">Home Page with Extends</h2>
+</div>
+{% endblock contents %}
