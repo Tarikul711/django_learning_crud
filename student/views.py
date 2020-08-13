@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Student
 # Create your views here.
 
 
 def home(request):
+    if request.method == 'POST':
+        name = request.POST.get('stName')
+        roll = request.POST.get('stRoll')
+        address = request.POST.get('stAddress')
+        studentData = Student(name=name, roll=roll, address=address)
+        studentData.save()
     return render(request, 'student/create.html')
 
 
